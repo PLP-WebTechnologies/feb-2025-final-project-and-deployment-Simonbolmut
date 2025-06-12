@@ -1,0 +1,399 @@
+Week 8 Assignment
+Description
+Assignment: Multipage Website Design, Coding, and Deployment
+
+Objective: To demonstrate proficiency in HTML5, CSS3, JavaScript, and website deployment by creating, styling, adding interactivity to, and deploying a responsive multipage website.
+
+Requirements:
+
+Design & Structure (Minimum 3 Pages):
+Plan a simple website with at least three interconnected pages (e.g., Home, About, Contact).
+Ensure the design is responsive, adapting to different screen sizes (mobile, tablet, desktop).
+Use HTML5 semantic elements (<header>, <nav>, <main>, <section>, <article>, <footer>, etc.).
+HTML5:
+Create well-structured, valid HTML5 code for each page.
+Use appropriate semantic tags.
+Include essential elements like navigation links connecting all pages.
+CSS3:
+Style the website using CSS3.
+Implement a consistent design across all pages (e.g., shared header/footer styles, color scheme, typography).
+Ensure responsiveness using media queries.
+Incorporate at least one CSS3 feature like transitions or animations.
+JavaScript:
+Add interactivity using JavaScript.
+Implement at least one interactive feature (e.g., basic form validation, image slider, modal popup, dynamic content loading).
+Deployment:
+Deploy the website using a platform like GitHub Pages, Netlify, or Vercel.
+Ensure all pages and assets are accessible online.
+Submission:
+Provide all website files (HTML, CSS, JS, images, etc.).
+Submit the live website URL.
+Include project documentation (see below).
+Project Structure & Implementation Guide:
+
+1. Planning & Design:
+
+Choose a Simple Topic: Pick a simple, clear topic for your website (e.g., a fictional small business, a personal portfolio, a hobby club, a simple blog).
+Wireframe/Sketch: Quickly sketch the layout for each page (Home, About, Contact). Include key elements like the header, navigation, main content area, and footer. Think about how it will look on a phone vs. a desktop.
+Content: Draft placeholder content for each page (paragraphs, headings, list items). Keep it simple.
+Navigation: Plan a simple navigation menu that appears on all pages and links to each page.
+2. File Setup:
+
+Create a project folder on your computer. Inside, create the following files:
+
+index.html (Home Page)
+about.html (About Page)
+contact.html (Contact Page)
+styles.css (Your CSS file - link this in all HTML files)
+script.js (Your JavaScript file - link this in all HTML files, usually before the closing </body> tag)
+(Optional but recommended) images/ folder - Place any image files here and reference them using relative paths (e.g., src="images/my-photo.jpg").
+3. HTML Structure (Example for index.html):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Name - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Website Name</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Welcome to Our Website!</h2>
+            <p>A brief, engaging introduction.</p>
+            <!-- Example: Image Slider placeholder -->
+            <div id="image-slider">
+                <img src="images/image1.jpg" alt="Slide 1">
+                <img src="images/image2.jpg" alt="Slide 2" style="display:none;">
+                <img src="images/image3.jpg" alt="Slide 3" style="display:none;">
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Our Features</h2>
+            <article>
+                <h3>Feature One</h3>
+                <p>Description...</p>
+            </article>
+            <article>
+                <h3>Feature Two</h3>
+                <p>Description...</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0 20px;
+    display: block;
+    float: left;
+}
+
+header nav {
+    float: right;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #cccccc;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+#hero {
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h2 {
+    color: #e8491d;
+}
+
+#features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* For responsiveness */
+    padding: 20px 0;
+}
+
+#features article {
+    flex: 1;
+    min-width: 300px; /* Minimum width for each article */
+    margin: 10px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Image Slider Styling */
+#image-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#image-slider img {
+    width: 100%;
+    height: auto;
+    display: none; /* Hide all images initially */
+}
+
+#image-slider img:first-child {
+    display: block; /* Show only the first image initially */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #35424a;
+    color: #ffffff;
+    clear: both; /* Clear floats from header */
+}
+
+/* Contact Form Styling (Example) */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #35424a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    header h1 {
+        float: none;
+    }
+
+    header nav {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    #features {
+        flex-direction: column; /* Stack articles vertically on small screens */
+    }
+
+    #features article {
+        min-width: 100%;
+    }
+}
+
+/* Add CSS Transition/Animation Example */
+article {
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+}
+5. JavaScript Interactivity (Example for script.js):
+
+// Simple Image Slider Example
+let currentSlide = 0;
+const slides = document.querySelectorAll('#image-slider img');
+const totalSlides = slides.length;
+
+function showSlide(n) {
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    // Calculate the correct slide index (loop back to first/last)
+    currentSlide = (n + totalSlides) % totalSlides;
+
+    // Show the current slide
+    slides[currentSlide].style.display = 'block';
+}
+
+// Function to go to the next slide
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+// Function to go to the previous slide
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Auto-advance the slider every 3 seconds
+let slideInterval = setInterval(nextSlide, 3000);
+
+// Stop auto-advancing when user interacts with the slider (optional)
+const sliderContainer = document.getElementById('image-slider');
+if (sliderContainer) {
+    sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    sliderContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 3000);
+    });
+}
+
+// Basic Form Validation Example (for contact.html)
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form'); // Adjust selector if needed
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const nameInput = document.getElementById('name'); // Make sure these IDs match your contact.html form
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            let isValid = true;
+            let errorMessage = '';
+
+            // Simple validation checks
+            if (!nameInput || nameInput.value.trim() === '') {
+                isValid = false;
+                errorMessage += 'Name is required.\n';
+            }
+
+            if (!emailInput || emailInput.value.trim() === '' || !emailInput.value.includes('@')) {
+                isValid = false;
+                errorMessage += 'Valid email is required.\n';
+            }
+
+            if (!messageInput || messageInput.value.trim() === '') {
+                isValid = false;
+                errorMessage += 'Message is required.\n';
+            }
+
+            if (isValid) {
+                // Form is valid - you could send data via fetch() or display a success message
+                alert('Form submitted successfully! (This is just a demo)');
+                // Clear the form
+                contactForm.reset();
+            } else {
+                // Form is invalid - show error message
+                alert('Please fix the following errors:\n' + errorMessage);
+            }
+        });
+    }
+});
+6. Deployment (Example using GitHub Pages):
+Create a GitHub Account: If you don't have one, sign up at github.com.
+Create a New Repository: Click the "+" icon in the top right, select "New repository". Name it (e.g., yourusername-assignment1), add a description, and make it public. Initialize it with a README if you like.
+Upload Files: You can drag and drop your project folder's contents (HTML, CSS, JS, images) directly into the repository on GitHub. Make sure to commit the changes.
+Enable GitHub Pages:
+Go to your repository's main page on GitHub.
+Click "Settings" (usually a gear icon).
+Scroll down to the "GitHub Pages" section.
+Under "Source", select the branch you want to publish (usually main or master).
+Click "Save".
+Wait a few minutes. You will see a message telling you that GitHub Pages is published and providing a URL (usually http://yourusername.github.io/yourrepositoryname/).
+Test: Visit the URL provided to see your live website!
+7. Project Documentation:
+
+Create a simple README.md file in the root of your repository (or submit it separately). Include:
+
+Project Title: The name of your website.
+Description: Briefly describe what your website is about.
+Features: List the key features (e.g., responsive design, image slider, form validation).
+Technologies Used: HTML5, CSS3, JavaScript, GitHub Pages.
+Live URL: The link to your deployed website.
+Notes (Optional): Any challenges you faced, what you learned, etc.
